@@ -3,7 +3,7 @@
 ## *Зміст*
 - [Введення](#Введення)
 - [Довідники](#Довідники)
-  - [*Установи* - branches](#Установи---branches)
+  - [*Установи* - `branches`](#Установи---branches)
   - [*Підрозділи* - institutions](#Підрозділи---institutions)
   - [*Продукти харчування* - products](#Продукти-харчування---products)
   - [*Типи продуктів харчування* - products_types](#Типи-продуктів-харчування---products_types)
@@ -44,7 +44,7 @@ DELETE | Видалення даних
 
 
 ## Довідники
-### *Установи* - branches
+### *Установи* - `branches`
 ```
   POST /api/cu_institution { "code": "14", "name": "18 (ДОУ)", "prefix": "Д18", "branch_code": "00000000003" }
   GET /api/institution?code=14
