@@ -27,7 +27,8 @@
   - [*Табель* - `timesheets`](#Табель---timesheets)
 
 ## Введення
-Рекомендуєма программа для тестування [**Postman**](https://www.getpostman.com/)
+Рекомендуєма программа для роботи з API - [**Postman**](https://www.getpostman.com/)
+
 Стуктура наведених запитів
 
 POST | /api/cu_supplier | { "code": "25", "name": "ТОВ Постач № 25" } 
