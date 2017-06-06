@@ -25,6 +25,20 @@
   - [*Меню-вимога* - menu_requirements](#Меню-вимога---menu_requirements)
   - [*Табель* - timesheets](#Табель---timesheets)
 
+
+Рекомендуєма программа для тестування [Postman](https://www.getpostman.com/)
+Стуктура наведених запитів
+POST | /api/cu_supplier | { "code": "25", "name": "ТОВ Постач № 25" } 
+-|-|-
+Тип запиту | суфікс до адреси серверу | Тіло запиту
+
+Запит | Опис
+-|-
+GET | Отримання данних
+POST | Коригування данних
+DELETE | Видалення даних
+
+Якщо `GET-запит` вказано в множині (закнічення на `-s(-es)`), параметрів не потрібно - данний запит повертає всі дані. Наприклад `GET /api/cu_suppliers`.
 ### Довідники
 ### *Установи* - branches
 ```
@@ -138,58 +152,50 @@
 ## Документи
 ### *Замовлення постачальнику* - supplier_orders
 ```
-  POST /api/cu_supplier_order
-  { "branch_code": "00000000006", "supplier_code": "00000000023", "number": "00000011", "date": 1495542284, "date_start": 1498867200, "date_end": 1519862400, "products": [ { "institution_code": "14", "product_code": "000000079", "contract_number": "BX-0000001", "date": 1495542284, "count": 12, "price": 10.05}, {"institution_code": "14", "product_code": "000000046  ", "contract_number": "BX-0000001", "date": 1495628684, "count": 15, "price": 17.12 } ] }
+  POST /api/cu_supplier_order { "branch_code": "00000000006", "supplier_code": "00000000023", "number": "00000011", "date": 1495542284, "date_start": 1498867200, "date_end": 1519862400, "products": [ { "institution_code": "14", "product_code": "000000079", "contract_number": "BX-0000001", "date": 1495542284, "count": 12, "price": 10.05}, {"institution_code": "14", "product_code": "000000046  ", "contract_number": "BX-0000001", "date": 1495628684, "count": 15, "price": 17.12 } ] }
   GET api/supplier_order?supplier_order?branch_code=0003&number=00000011
   DELETE api/supplier_order { "branch_code": "00000000003", "number": "000000000002" }
 ```
 
 ### *Надходження ТМЦ* - receipts
 ```
-  POST /api/cu_receipt
-  { "institution_code": "14", "supplier_order_number": "000000000002", "contract_number": "Ис-000000001", "number": "0000000000011", "invoice_number": "00000012", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "product_code": "000000079", "date": "1504224000", "count": 25, "count_invoice": 25, "causes_deviation_code": "" }, { "product_code": "000000046", "date": "1504224000", "count": 19, "count_invoice": 30, "causes_deviation_code": "000000002" } ] }
+  POST /api/cu_receipt { "institution_code": "14", "supplier_order_number": "000000000002", "contract_number": "Ис-000000001", "number": "0000000000011", "invoice_number": "00000012", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "product_code": "000000079", "date": "1504224000", "count": 25, "count_invoice": 25, "causes_deviation_code": "" }, { "product_code": "000000046", "date": "1504224000", "count": 19, "count_invoice": 30, "causes_deviation_code": "000000002" } ] }
   GET /api/receipt?/receipt?institution_code=14&number=KL-000000005
   DELETE /api/receipt { "institution_code": "14", "number": "000000000002" }
 ```
 
 ### *Замовлення продуктів харчування* - institution_orders
 ```
-  POST /api/cu_institution_order
-  { "institution_code": "14", "number": "000000000002", "date": "1485296673", "date_start": "1485296673", "date_end": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079  ", "count": 15, "description": "1 тиждень"}, { "date": "1485296673", "product_code": "000000048  ", "count": 15, "description": "1 тиждень,3 тиждень" } ] }
+  POST /api/cu_institution_order { "institution_code": "14", "number": "000000000002", "date": "1485296673", "date_start": "1485296673", "date_end": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079  ", "count": 15, "description": "1 тиждень"}, { "date": "1485296673", "product_code": "000000048  ", "count": 15, "description": "1 тиждень,3 тиждень" } ] }
   GET api/institution_order?institution_code=14&number=000000000002
   DELETE api/institution_order { "institution_code": "14", "number": "000000000002" }
 ```
 
 ### *Коректування замовлення продуктів харчування* - io_corrections
 ```
-  POST /api/cu_institution_order_correction
-  { "institution_code": "14", "institution_order_number": "000000000002", "number": "000000000004", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079", "diff": 7, "description": "1 тиждень" }, { "date": "1485296673", "product_code": "000000048  ", "diff": 5, "description": "1 тиждень,3 тиждень" } ] }
+  POST /api/cu_institution_order_correction { "institution_code": "14", "institution_order_number": "000000000002", "number": "000000000004", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079", "diff": 7, "description": "1 тиждень" }, { "date": "1485296673", "product_code": "000000048  ", "diff": 5, "description": "1 тиждень,3 тиждень" } ] }
   GET /api/institution_order_correction?institution_code=14&institution_order_number=000000000002&number=000000000010
   DELETE /api/institution_order_correction { "institution_code": "14", "institution_order_number": "KL-000000024", "number": "KL-000000011" }
 
 ```
 
 ### *Меню-вимога* - menu_requirements
-План
+- План
 ```
-  POST /api/cu_menu_requirement_plan
-  { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_sap": "1485296673", "number_sap": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_plan": 55, "count_exemption_plan": 19 }, { "children_category_code": "000000002", "count_all_plan": 3, "count_exemption_plan": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_plan": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_plan": 21 } ] }
+  POST /api/cu_menu_requirement_plan { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_sap": "1485296673", "number_sap": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_plan": 55, "count_exemption_plan": 19 }, { "children_category_code": "000000002", "count_all_plan": 3, "count_exemption_plan": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_plan": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_plan": 21 } ] }
 ```
-Факт
+- Факт
 ```
-  POST /api/cu_menu_requirement_fact
-  { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_saf": "1485296673", "number_saf": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_fact": 55, "count_exemption_fact": 19 }, { "children_category_code": "000000002", "count_all_fact": 3, "count_exemption_fact": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_fact": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_fact": 21 } ] }
+  POST /api/cu_menu_requirement_fact { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_saf": "1485296673", "number_saf": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_fact": 55, "count_exemption_fact": 19 }, { "children_category_code": "000000002", "count_all_fact": 3, "count_exemption_fact": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_fact": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_fact": 21 } ] }
 ```
-Загальні
+- Загальні
 ```
   GET api/menu_requirement?institution_code=14&number=000000000028
   DELETE api/menu_requirement { "institution_code": "14", "number": "000000000002" }
 ```
 ### *Табель* - timesheets
 ```
-  POST /api/cu_timesheet
-  { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1487548800",
-     "date_vb": "1485907200", "date_ve": "1488240000", "date_eb": "1485907200", "date_ee": "1486684800", "date_sa": "1506902400", "number_sa": "000000000001", "dates": [ { "child_code": "000000001", "children_group_code": "000000001", "reasons_absence_code": "000000001", "date": "1485907200" }, { "child_code": "000000001", "children_group_code": "000000001", "reasons_absence_code": "000000001", "date": "1485993600" } ] }
+  POST /api/cu_timesheet { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1487548800", "date_vb": "1485907200", "date_ve": "1488240000", "date_eb": "1485907200", "date_ee": "1486684800", "date_sa": "1506902400", "number_sa": "000000000001", "dates": [ { "child_code": "000000001", "children_group_code": "000000001", "reasons_absence_code": "000000001", "date": "1485907200" }, { "child_code": "000000001", "children_group_code": "000000001", "reasons_absence_code": "000000001", "date": "1485993600" } ] }
   GET api/timesheet?institution_code=14&number=000000000001
   DELETE api/timesheet { "institution_code": "14", "number": "000000000002" }
 ```
