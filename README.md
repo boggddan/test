@@ -1,83 +1,83 @@
-# API
+п»ї# API
 
-## Зміст
-- [Довідники](#Довідники)
-  - [*Установи* - branches](#Установи---branches)
-  - [*Підрозділи* - institutions](#Підрозділи---institutions)
-  - [*Продукти харчування* - products](#Продукти харчування---products)
-  - [*Типи продуктів харчування* - products_types](# Типи-продуктів-харчування---products_types)
-  - [*Упаковки* - packages](#Упаковки---packages)
-  - [*Упаковки постачальників* - suppliers_packages](#Упаковки-постачальників---suppliers_packages)
-  - [*Постачальники* - suppliers](# Постачальники---suppliers)
-  - [*Ціни на продукти* - price_products](#Ціни-на-продукти---price_products)
-  - [*Планова вартість дітодня* - children_day_costs](#Планова-вартість-дітодня---children_day_costs)
-  - [*Причини відмови поставки* - causes_deviations](#Причини-відмови-поставки---causes_deviations)
-  - [*Діти* - children](#Діти---children)
-  - [*Категорії дітей* - children_categories](#Категорії-дітей---children_categories)
-  - [*Групи дітей* - children_groups](#Групи дітей---children_groups)
-  - [*Типи категорії дітей* - children_categories_types](#Типи-категорії-дітей---children_categories_types)
-  - [*Причини відсутності дитини* - reasons_absences](#Причини-відсутності-дитини---reasons_absences)
-- [Документи](#Документи)
-  - [*Замовлення постачальнику* - supplier_orders](#Замовлення-постачальнику---supplier_orders)
-  - [*Надходження ТМЦ* - receipts](#Надходження-ТМЦ---receipts)
-  - [*Замовлення продуктів харчування* - institution_orders](#Замовлення-продуктів-харчування---institution_orders)
-  - [*Коректування замовлення продуктів харчування* - io_corrections](#Коректування-замовлення-продуктів-харчування---io_corrections)
-  - [*Меню-вимога* - menu_requirements](#Меню-вимога---menu_requirements)
-  - [*Табель* - timesheets](#Табель---timesheets)
+## Р—РјС–СЃС‚
+- [Р”РѕРІС–РґРЅРёРєРё](#Р”РѕРІС–РґРЅРёРєРё)
+  - [*РЈСЃС‚Р°РЅРѕРІРё* - branches](#РЈСЃС‚Р°РЅРѕРІРё---branches)
+  - [*РџС–РґСЂРѕР·РґС–Р»Рё* - institutions](#РџС–РґСЂРѕР·РґС–Р»Рё---institutions)
+  - [*РџСЂРѕРґСѓРєС‚Рё С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - products](#РџСЂРѕРґСѓРєС‚Рё С…Р°СЂС‡СѓРІР°РЅРЅСЏ---products)
+  - [*РўРёРїРё РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - products_types](# РўРёРїРё-РїСЂРѕРґСѓРєС‚С–РІ-С…Р°СЂС‡СѓРІР°РЅРЅСЏ---products_types)
+  - [*РЈРїР°РєРѕРІРєРё* - packages](#РЈРїР°РєРѕРІРєРё---packages)
+  - [*РЈРїР°РєРѕРІРєРё РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєС–РІ* - suppliers_packages](#РЈРїР°РєРѕРІРєРё-РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєС–РІ---suppliers_packages)
+  - [*РџРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєРё* - suppliers](# РџРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєРё---suppliers)
+  - [*Р¦С–РЅРё РЅР° РїСЂРѕРґСѓРєС‚Рё* - price_products](#Р¦С–РЅРё-РЅР°-РїСЂРѕРґСѓРєС‚Рё---price_products)
+  - [*РџР»Р°РЅРѕРІР° РІР°СЂС‚С–СЃС‚СЊ РґС–С‚РѕРґРЅСЏ* - children_day_costs](#РџР»Р°РЅРѕРІР°-РІР°СЂС‚С–СЃС‚СЊ-РґС–С‚РѕРґРЅСЏ---children_day_costs)
+  - [*РџСЂРёС‡РёРЅРё РІС–РґРјРѕРІРё РїРѕСЃС‚Р°РІРєРё* - causes_deviations](#РџСЂРёС‡РёРЅРё-РІС–РґРјРѕРІРё-РїРѕСЃС‚Р°РІРєРё---causes_deviations)
+  - [*Р”С–С‚Рё* - children](#Р”С–С‚Рё---children)
+  - [*РљР°С‚РµРіРѕСЂС–С— РґС–С‚РµР№* - children_categories](#РљР°С‚РµРіРѕСЂС–С—-РґС–С‚РµР№---children_categories)
+  - [*Р“СЂСѓРїРё РґС–С‚РµР№* - children_groups](#Р“СЂСѓРїРё РґС–С‚РµР№---children_groups)
+  - [*РўРёРїРё РєР°С‚РµРіРѕСЂС–С— РґС–С‚РµР№* - children_categories_types](#РўРёРїРё-РєР°С‚РµРіРѕСЂС–С—-РґС–С‚РµР№---children_categories_types)
+  - [*РџСЂРёС‡РёРЅРё РІС–РґСЃСѓС‚РЅРѕСЃС‚С– РґРёС‚РёРЅРё* - reasons_absences](#РџСЂРёС‡РёРЅРё-РІС–РґСЃСѓС‚РЅРѕСЃС‚С–-РґРёС‚РёРЅРё---reasons_absences)
+- [Р”РѕРєСѓРјРµРЅС‚Рё](#Р”РѕРєСѓРјРµРЅС‚Рё)
+  - [*Р—Р°РјРѕРІР»РµРЅРЅСЏ РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєСѓ* - supplier_orders](#Р—Р°РјРѕРІР»РµРЅРЅСЏ-РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєСѓ---supplier_orders)
+  - [*РќР°РґС…РѕРґР¶РµРЅРЅСЏ РўРњР¦* - receipts](#РќР°РґС…РѕРґР¶РµРЅРЅСЏ-РўРњР¦---receipts)
+  - [*Р—Р°РјРѕРІР»РµРЅРЅСЏ РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - institution_orders](#Р—Р°РјРѕРІР»РµРЅРЅСЏ-РїСЂРѕРґСѓРєС‚С–РІ-С…Р°СЂС‡СѓРІР°РЅРЅСЏ---institution_orders)
+  - [*РљРѕСЂРµРєС‚СѓРІР°РЅРЅСЏ Р·Р°РјРѕРІР»РµРЅРЅСЏ РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - io_corrections](#РљРѕСЂРµРєС‚СѓРІР°РЅРЅСЏ-Р·Р°РјРѕРІР»РµРЅРЅСЏ-РїСЂРѕРґСѓРєС‚С–РІ-С…Р°СЂС‡СѓРІР°РЅРЅСЏ---io_corrections)
+  - [*РњРµРЅСЋ-РІРёРјРѕРіР°* - menu_requirements](#РњРµРЅСЋ-РІРёРјРѕРіР°---menu_requirements)
+  - [*РўР°Р±РµР»СЊ* - timesheets](#РўР°Р±РµР»СЊ---timesheets)
 
-### Довідники
-### *Установи* - branches
+### Р”РѕРІС–РґРЅРёРєРё
+### *РЈСЃС‚Р°РЅРѕРІРё* - branches
 ```
-  POST /api/cu_institution { "code": "14", "name": "18 (ДОУ)", "prefix": "Д18", "branch_code": "00000000003" }
+  POST /api/cu_institution { "code": "14", "name": "18 (Р”РћРЈ)", "prefix": "Р”18", "branch_code": "00000000003" }
   GET /api/institution?code=14
   GET /api/institutions
 ```
 
-### *Підрозділи* - institutions
+### *РџС–РґСЂРѕР·РґС–Р»Рё* - institutions
 ```
-  POST /api/cu_institution { "code": "14", "name": "18 (ДОУ)", "prefix": "Д18", "branch_code": "00000000003" }
+  POST /api/cu_institution { "code": "14", "name": "18 (Р”РћРЈ)", "prefix": "Р”18", "branch_code": "00000000003" }
   GET /api/institution?code=14
   GET /api/institutions
 
 ```
 
-### *Продукти харчування* - products
+### *РџСЂРѕРґСѓРєС‚Рё С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - products
 ```
-  POST /api/cu_product { "code": "00000000079", "name": "Баклажани", "products_type_code": "000000001" }
+  POST /api/cu_product { "code": "00000000079", "name": "Р‘Р°РєР»Р°Р¶Р°РЅРё", "products_type_code": "000000001" }
   GET /api/product?code=000000079
   GET /api/products
 ```
 
-### *Типи продуктів харчування* - products_types
+### *РўРёРїРё РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - products_types
 ```
-  POST /api/cu_products_type { "code": "000000001", "name": "Вироби з молока", "priority": 1 }
+  POST /api/cu_products_type { "code": "000000001", "name": "Р’РёСЂРѕР±Рё Р· РјРѕР»РѕРєР°", "priority": 1 }
   GET /api/products_type?code=000000001
   GET /api/products_types
 ```
 
-### *Упаковки* - packages
+### *РЈРїР°РєРѕРІРєРё* - packages
 ```
-  POST /api/cu_package { "code": "000000001", "name": "Сітка 5 кг", "conversion_factor": 5.000000 }
+  POST /api/cu_package { "code": "000000001", "name": "РЎС–С‚РєР° 5 РєРі", "conversion_factor": 5.000000 }
   GET /api/package?code=000000001
   GET /api/packages
 ```
 
-### *Упаковки постачальників* - suppliers_packages
+### *РЈРїР°РєРѕРІРєРё РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєС–РІ* - suppliers_packages
 ```
   POST /api/cu_suppliers_package { "institution_code": "14", "supplier_code": "8", "product_code": "00000000079", "package_code": "000000001", "period": "1496448000", "activity": 1 }
   GET /api/suppliers_package?institution_code=14&supplier_code=8&product_code=00000000079&package_code=000000001&period=2017-05-03
   GET /api/suppliers_packages
 ```
 
-### *Постачальники* - suppliers
+### *РџРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєРё* - suppliers
 ```
-  POST /api/cu_supplier { "code": "25", "name": "ТОВ Постач № 25" }
+  POST /api/cu_supplier { "code": "25", "name": "РўРћР’ РџРѕСЃС‚Р°С‡ в„– 25" }
   GET /api/supplier?code=16
   GET /api/suppliers
 
 ```
 
-### *Ціни на продукти* - price_products
+### *Р¦С–РЅРё РЅР° РїСЂРѕРґСѓРєС‚Рё* - price_products
 ```
   POST /api/cu_price_product { "branch_code": "0003", "institution_code": "14", "product_code": "000000079  ", "price_date": "1485296673", "price": 30.25  }
   GET /api/price_product?branch_code=0003&institution_code=14&product_code=000000079&price_date=2017-01-25
@@ -85,7 +85,7 @@
 
 ```
 
-### *Планова вартість дітодня* - children_day_costs
+### *РџР»Р°РЅРѕРІР° РІР°СЂС‚С–СЃС‚СЊ РґС–С‚РѕРґРЅСЏ* - children_day_costs
 ```
   POST /api/cu_children_day_cost { "children_category_code": "000000001", "cost_date": "1485296673", "cost": 12.25 }
   GET /children_day_cost?children_category_code=000000001&cost_date=2017-01-25
@@ -93,50 +93,50 @@
 
 ```
 
-### *Причини відмови поставки* - causes_deviations
+### *РџСЂРёС‡РёРЅРё РІС–РґРјРѕРІРё РїРѕСЃС‚Р°РІРєРё* - causes_deviations
 ```
-  POST /api/cu_causes_deviation { "code": "000000002", "name": "Причина 2" }
+  POST /api/cu_causes_deviation { "code": "000000002", "name": "РџСЂРёС‡РёРЅР° 2" }
   GET /api/causes_deviation?code=000000002
   GET /api/causes_deviations
 ```
 
-### *Діти* - children
+### *Р”С–С‚Рё* - children
 ```
-  POST /api/cu_child { "code": "000000001", "name": "Іванов Іван Іванович" }
+  POST /api/cu_child { "code": "000000001", "name": "Р†РІР°РЅРѕРІ Р†РІР°РЅ Р†РІР°РЅРѕРІРёС‡" }
   GET /api/child?code=000000001
   GET /api/children
 ```
 
-### *Категорії дітей* - children_categories
+### *РљР°С‚РµРіРѕСЂС–С— РґС–С‚РµР№* - children_categories
 ```
-  POST /api/cu_children_category { "code": "00000001", "name": "Яслі", "children_categories_type_code": "00000001" }
+  POST /api/cu_children_category { "code": "00000001", "name": "РЇСЃР»С–", "children_categories_type_code": "00000001" }
   GET /api/children_category?code=000000003
   GET /api/children_categories
 ```
 
-### *Групи дітей* - children_groups
+### *Р“СЂСѓРїРё РґС–С‚РµР№* - children_groups
 ```
   POST /api/cu_children_group { "code": "000000003", "name": "3\1", "children_category_code": "000000001", "institution_code": "14"}
   GET /api/children_group?code=000000003
   GET /api/children_groups
 ```
 
-### *Типи категорії дітей* - children_categories_types
+### *РўРёРїРё РєР°С‚РµРіРѕСЂС–С— РґС–С‚РµР№* - children_categories_types
 ```
-  POST /api/cu_children_categories_type { "code": "00000001", "name": "Дошкільний" }
+  POST /api/cu_children_categories_type { "code": "00000001", "name": "Р”РѕС€РєС–Р»СЊРЅРёР№" }
   GET /api/children_categories_type?code=16
   GET /api/children_categories_types
 ```
 
-### *Причини відсутності дитини* - reasons_absences
+### *РџСЂРёС‡РёРЅРё РІС–РґСЃСѓС‚РЅРѕСЃС‚С– РґРёС‚РёРЅРё* - reasons_absences
 ```
-  POST /api/cu_reasons_absence { "code": "000000001", "mark": "Х", "name": "Хвороба" }
+  POST /api/cu_reasons_absence { "code": "000000001", "mark": "РҐ", "name": "РҐРІРѕСЂРѕР±Р°" }
   GET /api/reasons_absence?code=000000001
   GET /api/reasons_absences
 ```
 
-## Документи
-### *Замовлення постачальнику* - supplier_orders
+## Р”РѕРєСѓРјРµРЅС‚Рё
+### *Р—Р°РјРѕРІР»РµРЅРЅСЏ РїРѕСЃС‚Р°С‡Р°Р»СЊРЅРёРєСѓ* - supplier_orders
 ```
   POST /api/cu_supplier_order
   { "branch_code": "00000000006", "supplier_code": "00000000023", "number": "00000011", "date": 1495542284, "date_start": 1498867200, "date_end": 1519862400, "products": [ { "institution_code": "14", "product_code": "000000079", "contract_number": "BX-0000001", "date": 1495542284, "count": 12, "price": 10.05}, {"institution_code": "14", "product_code": "000000046  ", "contract_number": "BX-0000001", "date": 1495628684, "count": 15, "price": 17.12 } ] }
@@ -144,48 +144,48 @@
   DELETE api/supplier_order { "branch_code": "00000000003", "number": "000000000002" }
 ```
 
-### *Надходження ТМЦ* - receipts
+### *РќР°РґС…РѕРґР¶РµРЅРЅСЏ РўРњР¦* - receipts
 ```
   POST /api/cu_receipt
-  { "institution_code": "14", "supplier_order_number": "000000000002", "contract_number": "Ис-000000001", "number": "0000000000011", "invoice_number": "00000012", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "product_code": "000000079", "date": "1504224000", "count": 25, "count_invoice": 25, "causes_deviation_code": "" }, { "product_code": "000000046", "date": "1504224000", "count": 19, "count_invoice": 30, "causes_deviation_code": "000000002" } ] }
+  { "institution_code": "14", "supplier_order_number": "000000000002", "contract_number": "РСЃ-000000001", "number": "0000000000011", "invoice_number": "00000012", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "product_code": "000000079", "date": "1504224000", "count": 25, "count_invoice": 25, "causes_deviation_code": "" }, { "product_code": "000000046", "date": "1504224000", "count": 19, "count_invoice": 30, "causes_deviation_code": "000000002" } ] }
   GET /api/receipt?/receipt?institution_code=14&number=KL-000000005
   DELETE /api/receipt { "institution_code": "14", "number": "000000000002" }
 ```
 
-### *Замовлення продуктів харчування* - institution_orders
+### *Р—Р°РјРѕРІР»РµРЅРЅСЏ РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - institution_orders
 ```
   POST /api/cu_institution_order
-  { "institution_code": "14", "number": "000000000002", "date": "1485296673", "date_start": "1485296673", "date_end": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079  ", "count": 15, "description": "1 тиждень"}, { "date": "1485296673", "product_code": "000000048  ", "count": 15, "description": "1 тиждень,3 тиждень" } ] }
+  { "institution_code": "14", "number": "000000000002", "date": "1485296673", "date_start": "1485296673", "date_end": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079  ", "count": 15, "description": "1 С‚РёР¶РґРµРЅСЊ"}, { "date": "1485296673", "product_code": "000000048  ", "count": 15, "description": "1 С‚РёР¶РґРµРЅСЊ,3 С‚РёР¶РґРµРЅСЊ" } ] }
   GET api/institution_order?institution_code=14&number=000000000002
   DELETE api/institution_order { "institution_code": "14", "number": "000000000002" }
 ```
 
-### *Коректування замовлення продуктів харчування* - io_corrections
+### *РљРѕСЂРµРєС‚СѓРІР°РЅРЅСЏ Р·Р°РјРѕРІР»РµРЅРЅСЏ РїСЂРѕРґСѓРєС‚С–РІ С…Р°СЂС‡СѓРІР°РЅРЅСЏ* - io_corrections
 ```
   POST /api/cu_institution_order_correction
-  { "institution_code": "14", "institution_order_number": "000000000002", "number": "000000000004", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079", "diff": 7, "description": "1 тиждень" }, { "date": "1485296673", "product_code": "000000048  ", "diff": 5, "description": "1 тиждень,3 тиждень" } ] }
+  { "institution_code": "14", "institution_order_number": "000000000002", "number": "000000000004", "date": "1485296673", "date_sa": "1485296673", "number_sa": "000000000001", "products": [ { "date": "1485296673", "product_code": "000000079", "diff": 7, "description": "1 С‚РёР¶РґРµРЅСЊ" }, { "date": "1485296673", "product_code": "000000048  ", "diff": 5, "description": "1 С‚РёР¶РґРµРЅСЊ,3 С‚РёР¶РґРµРЅСЊ" } ] }
   GET /api/institution_order_correction?institution_code=14&institution_order_number=000000000002&number=000000000010
   DELETE /api/institution_order_correction { "institution_code": "14", "institution_order_number": "KL-000000024", "number": "KL-000000011" }
 
 ```
 
-### *Меню-вимога* - menu_requirements
-План
+### *РњРµРЅСЋ-РІРёРјРѕРіР°* - menu_requirements
+РџР»Р°РЅ
 ```
   POST /api/cu_menu_requirement_plan
   { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_sap": "1485296673", "number_sap": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_plan": 55, "count_exemption_plan": 19 }, { "children_category_code": "000000002", "count_all_plan": 3, "count_exemption_plan": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_plan": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_plan": 21 } ] }
 ```
-Факт
+Р¤Р°РєС‚
 ```
   POST /api/cu_menu_requirement_fact
   { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1485296673", "splendingdate": "1485296673", "date_saf": "1485296673", "number_saf": "000000000001", "children_categories": [ { "children_category_code": "000000001", "count_all_fact": 55, "count_exemption_fact": 19 }, { "children_category_code": "000000002", "count_all_fact": 3, "count_exemption_fact": 7 } ], "products": [ { "children_category_code": "000000001", "product_code": "000000079  ", "count_fact": 15 }, { "children_category_code": "000000002", "product_code": "000000079  ", "count_fact": 21 } ] }
 ```
-Загальні
+Р—Р°РіР°Р»СЊРЅС–
 ```
   GET api/menu_requirement?institution_code=14&number=000000000028
   DELETE api/menu_requirement { "institution_code": "14", "number": "000000000002" }
 ```
-### *Табель* - timesheets
+### *РўР°Р±РµР»СЊ* - timesheets
 ```
   POST /api/cu_timesheet
   { "branch_code": "0003", "institution_code": "14", "number": "000000000002", "date": "1487548800",
