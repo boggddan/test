@@ -1,15 +1,19 @@
 # API
 
 ## Table of Contents
-- Справочники
-  - [Отделы образования](#Справочник)
-
+- [Справочники](#cправочники)
+  - [*Отделы образования* - branches](#Отделы-образования---branches)
+  - [*Подразделения* - institutions](#Подразделения---institutions)
+  - [*Продукты* - products](#Продукты---products)
+  - [*Типы продуктов* - products_types](#Типы-продуктов---products_types)
+  - [*Поставщики* - suppliers](#Поставщики---suppliers)
+  - [*Типы категорий детей* - children_categories_types](#Типы-категорий-детей---children_categories_types)
+  - [*Категорий-детей* - children_categories](#Категорий-детей---children_categories)
+  - [*Цены-продуктов* - price_products](#Цены-продуктов---price_products)
+  - [**Стоимость детодня* - children_day_costs](#Стоимость-детодня---children_day_costs)
 
 
 ## Справочники:
-
-
-
 ### *Отделы образования* - branches
 * Добавление записи
 ```
@@ -130,8 +134,7 @@
   GET /api/price_products
 ```
 
-### Справочник
-
+### *Стоимость детодня* - children_day_costs
 * Добавление записи
 ```
 POST /api/cu_children_day_cost { "children_category_code": "000000001", "cost_date": "1485296673", "cost": 12.25 }
