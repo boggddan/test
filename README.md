@@ -10,7 +10,7 @@
   - [*Типы категорий детей* - children_categories_types](#Типы-категорий-детей---children_categories_types)
   - [*Категорий-детей* - children_categories](#Категорий-детей---children_categories)
   - [*Цены-продуктов* - price_products](#Цены-продуктов---price_products)
-  - [**Стоимость детодня* - children_day_costs](#Стоимость-детодня---children_day_costs)
+  - [*Стоимость детодня* - children_day_costs](#Стоимость-детодня---children_day_costs)
 
 
 ## Справочники:
