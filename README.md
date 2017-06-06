@@ -2,7 +2,7 @@
 
 ## Table of Contents
 - Справочники
-  - [Отделы образования](#children_day_costs)
+  - [Отделы образования](#Справочник)
 
 
 
@@ -130,7 +130,7 @@
   GET /api/price_products
 ```
 
-### children_day_costs
+### Справочник
 
 * Добавление записи
 ```
