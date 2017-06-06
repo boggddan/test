@@ -4,7 +4,7 @@
 - [Довідники](#Довідники)
   - [*Установи* - branches](#Установи---branches)
   - [*Підрозділи* - institutions](#Підрозділи---institutions)
-  - [*Продукти харчування* - products](#Продукти харчування---products)
+  - [*Продукти харчування* - products](#Продукти-харчування---products)
   - [*Типи продуктів харчування* - products_types](#Типи-продуктів-харчування---products_types)
   - [*Упаковки* - packages](#Упаковки---packages)
   - [*Упаковки постачальників* - suppliers_packages](#Упаковки-постачальників---suppliers_packages)
@@ -25,12 +25,14 @@
   - [*Меню-вимога* - menu_requirements](#Меню-вимога---menu_requirements)
   - [*Табель* - timesheets](#Табель---timesheets)
 
-
-Рекомендуєма программа для тестування [Postman](https://www.getpostman.com/)
+Рекомендуєма программа для тестування [**Postman**](https://www.getpostman.com/)
 Стуктура наведених запитів
+
 POST | /api/cu_supplier | { "code": "25", "name": "ТОВ Постач № 25" } 
 -|-|-
 Тип запиту | суфікс до адреси серверу | Тіло запиту
+
+![postman_post](https://user-images.githubusercontent.com/24915025/26839046-8f3d7ef0-4aea-11e7-8a11-bd246f5c2aa2.png)
 
 Запит | Опис
 -|-
@@ -39,7 +41,6 @@ POST | Коригування данних
 DELETE | Видалення даних
 
 Якщо `GET-запит` вказано в множині (закнічення на `-s(-es)`), параметрів не потрібно - данний запит повертає всі дані. Наприклад `GET /api/cu_suppliers`.
-![postman_post](https://user-images.githubusercontent.com/24915025/26839046-8f3d7ef0-4aea-11e7-8a11-bd246f5c2aa2.png)
 
 
 ### Довідники
