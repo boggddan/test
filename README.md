@@ -26,10 +26,10 @@
   - [*Меню-вимога* - `menu_requirements`](#Меню-вимога---menu_requirements)
   - [*Табель* - `timesheets`](#Табель---timesheets)
 
-## Введення
+## Введення [:top:](#Зміст)
 Рекомендуєма программа для роботи з API - [**Postman**](https://www.getpostman.com/)
 
-Стуктура наведених запитів
+**Стуктура наведених запитів**
 
 POST | /api/cu_supplier | { "code": "25", "name": "ТОВ Постач № 25" } 
 -|-|-
