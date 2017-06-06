@@ -5,16 +5,16 @@
   - [*Установи* - branches](#Установи---branches)
   - [*Підрозділи* - institutions](#Підрозділи---institutions)
   - [*Продукти харчування* - products](#Продукти харчування---products)
-  - [*Типи продуктів харчування* - products_types](# Типи-продуктів-харчування---products_types)
+  - [*Типи продуктів харчування* - products_types](#Типи-продуктів-харчування---products_types)
   - [*Упаковки* - packages](#Упаковки---packages)
   - [*Упаковки постачальників* - suppliers_packages](#Упаковки-постачальників---suppliers_packages)
-  - [*Постачальники* - suppliers](# Постачальники---suppliers)
+  - [*Постачальники* - suppliers](#Постачальники---suppliers)
   - [*Ціни на продукти* - price_products](#Ціни-на-продукти---price_products)
   - [*Планова вартість дітодня* - children_day_costs](#Планова-вартість-дітодня---children_day_costs)
   - [*Причини відмови поставки* - causes_deviations](#Причини-відмови-поставки---causes_deviations)
   - [*Діти* - children](#Діти---children)
   - [*Категорії дітей* - children_categories](#Категорії-дітей---children_categories)
-  - [*Групи дітей* - children_groups](#Групи дітей---children_groups)
+  - [*Групи дітей* - children_groups](#Групи-дітей---children_groups)
   - [*Типи категорії дітей* - children_categories_types](#Типи-категорії-дітей---children_categories_types)
   - [*Причини відсутності дитини* - reasons_absences](#Причини-відсутності-дитини---reasons_absences)
 - [Документи](#Документи)
@@ -39,6 +39,9 @@ POST | Коригування данних
 DELETE | Видалення даних
 
 Якщо `GET-запит` вказано в множині (закнічення на `-s(-es)`), параметрів не потрібно - данний запит повертає всі дані. Наприклад `GET /api/cu_suppliers`.
+![postman_post](https://user-images.githubusercontent.com/24915025/26839046-8f3d7ef0-4aea-11e7-8a11-bd246f5c2aa2.png)
+
+
 ### Довідники
 ### *Установи* - branches
 ```
